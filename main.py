@@ -96,7 +96,6 @@ def run_model(
     Main function to either train the model or generate text.
     Randomizes the seed character for more varied results
     """
-    print(type(model))
     if os.path.exists("model.pt"):
         model.load_state_dict(torch.load("model.pt"))
 
@@ -174,7 +173,7 @@ def validate_data(
     """
     overfit = False
     if step % interval == 0:
-        patience = 10  # Validation checks before stopping
+        patience = 5  # Validation checks before stopping
         xb, yb = get_batch(data, batch_size, block_size)
 
         with torch.no_grad():
