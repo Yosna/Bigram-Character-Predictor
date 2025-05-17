@@ -1,4 +1,4 @@
-# Bigram Character Prediction Model
+# Bigram Language Model
 
 This project implements a simple bigram language model using PyTorch. It predicts the next character in a sequence based on the current character, and uses an embedding table to learn character-to-character relationships.
 
